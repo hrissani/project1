@@ -27,12 +27,36 @@ class InitState extends State<LoginPage> {
               decoration: BoxDecoration(
                   borderRadius:
                       BorderRadius.only(bottomLeft: Radius.circular(90)),
-                  color: Color(0xff65dcdb),
+                  color: Color(0xffffd1dc),
                   gradient: LinearGradient(colors: [
-                    (new Color(0xff65dcdb)),
-                    (new Color(0xffffb6c1)),
+                    (new Color(0xffffd1dc)),
+                    (new Color(0xfff2f3f4)),
                   ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
-            )
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: Image.asset("images/logo3.png"),
+                      height: 250,
+                      width: 250,
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(bottom: 22),
+                      // alignment: Alignment.bottomRight,
+                      child: Text(
+                        "АВТОРИЗАЦИЯ",
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontFamily: 'GothamLight'),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
