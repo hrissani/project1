@@ -30,7 +30,7 @@ class InitState extends State<LoginPage> {
                   color: Color(0xffffd1dc),
                   gradient: LinearGradient(colors: [
                     (new Color(0xffffd1dc)),
-                    (new Color(0xfff2f3f4)),
+                    (new Color(0xffe6e6e6)),
                   ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
               child: Center(
                 child: Column(
@@ -38,19 +38,19 @@ class InitState extends State<LoginPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      child: Image.asset("images/logo3.png"),
-                      height: 250,
-                      width: 250,
+                      child: Image.asset("images/logo.png"),
+                      height: 100,
+                      width: 100,
                     ),
                     Container(
-                      margin: EdgeInsets.only(bottom: 22),
+                      //margin: EdgeInsets.only(bottom: 22),
                       // alignment: Alignment.bottomRight,
                       child: Text(
                         "АВТОРИЗАЦИЯ",
                         style: TextStyle(
                             fontSize: 18,
-                            color: Colors.black,
-                            fontFamily: 'GothamLight'),
+                            color: Colors.white,
+                            fontFamily: 'Gotham'),
                       ),
                     )
                   ],
