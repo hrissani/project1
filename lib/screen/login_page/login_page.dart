@@ -38,6 +38,7 @@ class InitState extends State<LoginPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
+                      margin: EdgeInsets.only(right: 20, top: 20),
                       child: Image.asset("images/logo.png"),
                       height: 100,
                       width: 100,
@@ -57,6 +58,14 @@ class InitState extends State<LoginPage> {
                 ),
               ),
             ),
+
+          Container(
+            alignment: Alignment.center,
+            child: TextField(
+              cursorColor: ,
+            ),
+          )
+
           ],
         ),
       ),
