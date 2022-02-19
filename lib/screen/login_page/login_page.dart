@@ -58,14 +58,58 @@ class InitState extends State<LoginPage> {
                 ),
               ),
             ),
-
-          Container(
-            alignment: Alignment.center,
-            child: TextField(
-              cursorColor: ,
+            Container(
+              margin: EdgeInsets.only(left: 20, right: 20, top: 70),
+              padding: EdgeInsets.only(left: 20, right: 20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: Colors.grey[200],
+                boxShadow: [
+                  BoxShadow(
+                      offset: Offset(0, 10),
+                      blurRadius: 50,
+                      color: Color(0xffEEEEEE))
+                ],
+              ),
+              alignment: Alignment.center,
+              child: TextField(
+                cursorColor: Color(0xffffd1dc),
+                decoration: InputDecoration(
+                    icon: Icon(
+                      Icons.email,
+                      color: Color(0xffffd1dc),
+                    ),
+                    hintText: "Введите E-mail",
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none),
+              ),
             ),
-          )
-
+            Container(
+              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+              padding: EdgeInsets.only(left: 20, right: 20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: Colors.grey[200],
+                boxShadow: [
+                  BoxShadow(
+                      offset: Offset(0, 10),
+                      blurRadius: 50,
+                      color: Color(0xffEEEEEE))
+                ],
+              ),
+              alignment: Alignment.center,
+              child: TextField(
+                cursorColor: Color(0xffffd1dc),
+                decoration: InputDecoration(
+                    icon: Icon(
+                      Icons.vpn_key,
+                      color: Color(0xffffd1dc),
+                    ),
+                    hintText: "Введите пароль",
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none),
+              ),
+            )
           ],
         ),
       ),
