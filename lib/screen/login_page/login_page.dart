@@ -99,6 +99,7 @@ class InitState extends State<LoginPage> {
               ),
               alignment: Alignment.center,
               child: TextField(
+                obscureText: true,
                 cursorColor: Color(0xffffd1dc),
                 decoration: InputDecoration(
                     icon: Icon(
@@ -109,7 +110,14 @@ class InitState extends State<LoginPage> {
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none),
               ),
-            )
+            ),
+            Container(
+                margin: EdgeInsets.only(top: 10, right: 20),
+                alignment: Alignment.centerRight,
+                child: GestureDetector(
+                  child: Text("Забыли пароль?"),
+                  onTap: () => {},
+                ))
           ],
         ),
       ),
