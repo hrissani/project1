@@ -117,7 +117,28 @@ class InitState extends State<LoginPage> {
                 child: GestureDetector(
                   child: Text("Забыли пароль?"),
                   onTap: () => {},
-                ))
+                ),
+                ),
+
+                GestureDetector(
+                  onTap: () => {
+
+                  },
+                  child: Container(
+                    
+                    decoration: BoxDecoration(
+                       boxShadow: [
+                  BoxShadow(
+                      offset: Offset(0, 10),
+                      blurRadius: 50,
+                      color: Color(0xffEEEEEE)
+                    ),
+                    child: Text("Логин",
+                    style: TextStyle(
+                      color: Colors.white
+                    ),),
+                  ),
+                )
           ],
         ),
       ),
