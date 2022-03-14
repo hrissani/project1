@@ -18,7 +18,18 @@ class InitState extends State<SignUpScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            Container(
+              height: 250,
+              decoration: BoxDecoration(
+                  borderRadius:
+                      BorderRadius.only(bottomLeft: Radius.circular(90)),
+                  gradient: LinearGradient(colors: [
+                    (new Color(0xffffd1dc)),
+                    (new Color(0xffe6e6e6))
+                  ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+            )
+          ],
         ),
       ),
     );
