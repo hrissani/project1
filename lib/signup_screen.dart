@@ -28,6 +28,28 @@ class InitState extends State<SignUpScreen> {
                     (new Color(0xffffd1dc)),
                     (new Color(0xffe6e6e6))
                   ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                        margin: EdgeInsets.only(top: 50),
+                        child: Image.asset("images/logo.png"),
+                        height: 90,
+                        width: 90),
+                    Container(
+                      child: Text(
+                        "РЕГИСТРАЦИЯ",
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                            fontFamily: 'Gotham'),
+                      ),
+                    )
+                  ],
+                ),
+              ),
             )
           ],
         ),
