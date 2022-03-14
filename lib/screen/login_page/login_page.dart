@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project12/bi/auth.dart';
 import 'package:project12/screen/home_page/home_page.dart';
+import 'package:project12/signup_screen.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -11,6 +12,8 @@ class LoginPage extends StatefulWidget {
 class InitState extends State<LoginPage> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+
+  get child => null;
 
   @override
   Widget build(BuildContext context) {
@@ -112,33 +115,61 @@ class InitState extends State<LoginPage> {
               ),
             ),
             Container(
-                margin: EdgeInsets.only(top: 10, right: 20),
-                alignment: Alignment.centerRight,
-                child: GestureDetector(
-                  child: Text("Забыли пароль?"),
-                  onTap: () => {},
+              margin: EdgeInsets.only(top: 10, right: 20),
+              alignment: Alignment.centerRight,
+              child: GestureDetector(
+                child: Text("Забыли пароль?"),
+                onTap: () => {},
+              ),
+            ),
+            GestureDetector(
+              onTap: () => {},
+              child: Container(
+                margin: EdgeInsets.only(left: 20, right: 20, top: 70),
+                padding: EdgeInsets.only(left: 20, right: 20),
+                alignment: Alignment.center,
+                height: 54,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    (new Color(0xffffd1dc)),
+                    (new Color(0xffe6e6e6))
+                  ], begin: Alignment.centerLeft, end: Alignment.centerRight),
+                  borderRadius: BorderRadius.circular(50),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: Offset(0, 10),
+                        blurRadius: 50,
+                        color: Color(0xffEEEEEE)),
+                  ],
                 ),
+                child: Text(
+                  "ВОЙТИ",
+                  style: TextStyle(color: Colors.white, fontFamily: 'Gotham'),
                 ),
-
-                GestureDetector(
-                  onTap: () => {
-
-                  },
-                  child: Container(
-                    
-                    decoration: BoxDecoration(
-                       boxShadow: [
-                  BoxShadow(
-                      offset: Offset(0, 10),
-                      blurRadius: 50,
-                      color: Color(0xffEEEEEE)
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Нет аккаунта? "),
+                  GestureDetector(
+                    onTap: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignUpScreen(),
+                          ))
+                    },
+                    child: Text(
+                      "Зарегистрируйтесь!",
+                      style: TextStyle(color: Color(0xffffd1dc)),
                     ),
-                    child: Text("Логин",
-                    style: TextStyle(
-                      color: Colors.white
-                    ),),
-                  ),
-                )
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
