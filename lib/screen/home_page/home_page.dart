@@ -1,5 +1,8 @@
-import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:project12/screen/page/calendar_page.dart';
+import 'package:project12/screen/page/profile_page.dart';
+import 'package:project12/screen/page/settings_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -9,92 +12,32 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  get currentIndex => null;
+  int index = 0;
 
-  get changePage => null;
+  final screens = [
+    CalendarPage(),
+    SettingsPage(),
+    ProfilePage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
+    final items = <Widget>[
+      Icon(Icons.calendar_today_rounded, size: 30),
+      Icon(Icons.settings, size: 30),
+      Icon(Icons.person, size: 30),
+    ];
+
     return Scaffold(
-      backgroundColor: Colors.grey[100],
-      appBar: AppBar(
-        title: Text('Bottom Navigation Bar'),
-        centerTitle: true,
+      backgroundColor: Colors.red[100],
+      body: screens[index],
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.transparent,
+        height: 60,
+        index: index,
+        items: items,
+        onTap: (index) => setState(() => this.index = index),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-        backgroundColor: Colors.red,
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
-      bottomNavigationBar: BubbleBottomBar(
-        opacity: 0.2,
-        backgroundColor: Colors.white,
-        borderRadius: BorderRadius.vertical(
-          top: Radius.circular(16.0),
-        ),
-        currentIndex: currentIndex,
-        hasInk: true,
-        inkColor: Colors.black12,
-        hasNotch: true,
-        fabLocation: BubbleBottomBarFabLocation.end,
-        onTap: changePage,
-        items: [
-          BubbleBottomBarItem(
-            backgroundColor: Colors.red,
-            icon: Icon(
-              Icons.dashboard,
-              color: Colors.black,
-            ),
-            activeIcon: Icon(
-              Icons.dashboard,
-              color: Colors.red,
-            ),
-            title: Text('Home'),
-          ),
-          BubbleBottomBarItem(
-            backgroundColor: Colors.indigo,
-            icon: Icon(
-              Icons.folder_open,
-              color: Colors.black,
-            ),
-            activeIcon: Icon(
-              Icons.folder_open,
-              color: Colors.indigo,
-            ),
-            title: Text('Folders'),
-          ),
-          BubbleBottomBarItem(
-            backgroundColor: Colors.deepPurple,
-            icon: Icon(
-              Icons.access_time,
-              color: Colors.black,
-            ),
-            activeIcon: Icon(
-              Icons.access_time,
-              color: Colors.deepPurple,
-            ),
-            title: Text('Log'),
-          ),
-        ],
-      ),
-      body: (currentIndex == 0)
-          ? Icon(
-              Icons.dashboard,
-              size: 150.0,
-              color: Colors.red,
-            )
-          : (currentIndex == 1)
-              ? Icon(
-                  Icons.folder_open,
-                  size: 150.0,
-                  color: Colors.indigo,
-                )
-              : Icon(
-                  Icons.access_time,
-                  size: 150.0,
-                  color: Colors.deepPurple,
-                ),
     );
   }
 }
