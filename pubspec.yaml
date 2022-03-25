@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: 
 
   curved_navigation_bar: ^1.0.3
+  table_calendar: ^3.0.5
 
 dev_dependencies:
   flutter_test:

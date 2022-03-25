@@ -29,7 +29,6 @@ class _HomePageState extends State<HomePage> {
     ];
 
     return Scaffold(
-      backgroundColor: Colors.red[100],
       body: screens[index],
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
