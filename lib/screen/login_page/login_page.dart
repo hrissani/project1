@@ -23,7 +23,7 @@ class InitState extends State<LoginPage> {
         child: Column(
           children: [
             Container(
-              height: 300,
+              height: 200,
               decoration: BoxDecoration(
                   borderRadius:
                       BorderRadius.only(bottomLeft: Radius.circular(90)),
@@ -59,7 +59,7 @@ class InitState extends State<LoginPage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 70),
+              margin: EdgeInsets.only(left: 20, right: 20, top: 120),
               padding: EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
@@ -117,7 +117,7 @@ class InitState extends State<LoginPage> {
                     context, MaterialPageRoute(builder: (_) => HomePage()))
               },
               child: Container(
-                margin: EdgeInsets.only(left: 20, right: 20, top: 70),
+                margin: EdgeInsets.only(left: 20, right: 20, top: 120),
                 padding: EdgeInsets.only(left: 20, right: 20),
                 alignment: Alignment.center,
                 height: 54,

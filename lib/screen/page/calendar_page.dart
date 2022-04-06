@@ -36,6 +36,11 @@ class _CalendarPageState extends State<CalendarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("SMART INVITE"),
+        centerTitle: true,
+        backgroundColor: Colors.red[100],
+      ),
       body: Column(
         children: [
           TableCalendar(
